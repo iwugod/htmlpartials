@@ -1,0 +1,86 @@
+<div class="relative min-h-18" x-data="{active: false, scroll: false}">
+
+        <header class="fixed z-10 w-full shadow-xl min-h-12 xl:fixed"
+            @scroll.window="scroll = (window.pageYOffset > 20) ? true : false"
+            :class="{ ' bg-primary-400': scroll, 'bg-white': !scroll }">
+            <nav class="flex items-center justify-between py-3 mx-auto max-w-7xl" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="/index.html" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Logo</span>
+
+                        <img class="w-auto h-8" src="/assets/logoipsum-332.svg" alt="">
+
+
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button" x-on:click="active = !active"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"  :class="{ ' text-white': scroll, 'text-gray-900': !scroll }">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center hidden lg:flex lg:gap-x-12">
+                    <a href="/index.html" class="text-sm font-normal leading-6 text-gray-900 transition duration-300 group"
+                        :class="{ ' text-white': scroll, 'text-gray-900': !scroll }">Home <span
+                            class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-indigo-700"></span></a>
+                    
+
+                        <a href="/contact.html"
+                            class="bg-primary-500 text-sm font-normal leading-6  px-3.5 py-2  text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Contact
+                            us</a>
+
+                </div>
+
+            </nav>
+
+            <div class="flex lg:hidden" role="dialog" aria-modal="true"
+                :class="{ ' fixed': active, 'hidden': !active }">
+
+                <div class="fixed inset-0 z-50"></div>
+                <div
+                    class="inset-y-0 right-0 z-50 hidden w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" :class="{' fixed': active, 'hidden': !active}">
+                    <div class="flex items-center justify-between" >
+                        <a href="#" class="-m-1.5 p-1.5">
+                            <span class="sr-only">ILAB</span>
+
+                            <img class="w-auto h-8" src="/assets/ilab-logo.png" alt="">
+                        </a>
+                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700"
+                            x-on:click="active = !active">
+                            <span class="sr-only">Close menu</span>
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flow-root mt-6">
+                        <div class="-my-6 divide-y divide-gray-500/10">
+                            <div class="py-6 space-y-2">
+                                <a href="/index.html"
+                                    class="block px-3 py-2 -mx-3 text-base font-normal leading-7 text-gray-900 rounded-lg hover:bg-gray-50">Home</a>
+                            
+                                <a href="/contact.html"
+                                    class="block px-3 py-2 -mx-3 text-base font-normal leading-7 text-gray-900 rounded-lg hover:bg-gray-50">Contact
+                                    us</a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="relative isolate bg-gradient-to-b from-indigo-100/20">
+        </div>
+        <div class="absolute hidden lg:block inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
+            aria-hidden="true">
+
+        </div>
+
+    </div>

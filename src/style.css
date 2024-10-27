@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+
+ .hide-scroll-bar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+    .hide-scroll-bar::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Opera */
+    }
+
+    .custom-after::after {
+      position: absolute;
+      top: 0;
+      width: 50vw;
+      right: -50vw;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      background-color: rgb(243 244 246);
+      content: "";
+    }
+
+    .left-margin {
+      margin-left: 12%;
+
+      /* @media (max-width: 1800px) {
+        margin-left: 14%;
+    } */
+
+      @media (min-width: 2500px) {
+        margin-left: 25%;
+      }
+    }
+
+    .list_max-width {
+      max-width: 1500px;
+      overflow: hidden;
+
+    }
+
